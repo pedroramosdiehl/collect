@@ -225,9 +225,9 @@ public class MainMenuActivity extends CollectAbstractActivity {
 
         {
             // dynamically construct the "ODK Collect vA.B" string
-            TextView mainMenuMessageLabel = findViewById(R.id.main_menu_header);
-            mainMenuMessageLabel.setText(Collect.getInstance()
-                    .getVersionedAppName());
+//            TextView mainMenuMessageLabel = findViewById(R.id.main_menu_header);
+//            mainMenuMessageLabel.setText(Collect.getInstance()
+//                    .getVersionedAppName());
         }
 
         File f = new File(Collect.ODK_ROOT + "/collect.settings");
@@ -423,15 +423,15 @@ public class MainMenuActivity extends CollectAbstractActivity {
             case R.id.menu_general_preferences:
                 startActivity(new Intent(this, PreferencesActivity.class));
                 return true;
-            case R.id.menu_admin_preferences:
-                String pw = adminPreferences.getString(
-                        AdminKeys.KEY_ADMIN_PW, "");
-                if ("".equalsIgnoreCase(pw)) {
-                    startActivity(new Intent(this, AdminPreferencesActivity.class));
-                } else {
-                    showDialog(PASSWORD_DIALOG);
-                }
-                return true;
+//            case R.id.menu_admin_preferences:
+//                String pw = adminPreferences.getString(
+//                        AdminKeys.KEY_ADMIN_PW, "");
+//                if ("".equalsIgnoreCase(pw)) {
+//                    startActivity(new Intent(this, AdminPreferencesActivity.class));
+//                } else {
+//                    showDialog(PASSWORD_DIALOG);
+//                }
+//                return true;
         }
         return super.onOptionsItemSelected(item);
     }
